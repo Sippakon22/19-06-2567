@@ -14,7 +14,9 @@
         <input type="submit" value="ตกลง">
     </form>
 
-    <a href= "index.php">ไปหน้าฟุตบอล</a>
+    <div>
+        <a href= "index.php">ไปหน้าฟุตบอล</a>
+    </div>
 
     <?php
         if(isset($_GET['month'])){
@@ -31,13 +33,13 @@
                     Day(31);
                     break;
                 case 'เมษายน':
-                    Day(31);
+                    Day(30);
                     break;
                 case 'พฤษภาคม':
                     Day(31);
                     break;
                 case 'มิถุนายน':
-                    Day(31);
+                    Day(30);
                     break;
                 case 'กรกฎาคม':
                     Day(31);
@@ -46,13 +48,13 @@
                     Day(31);
                     break;
                 case 'กันยายน':
-                    Day(31);
+                    Day(30);
                     break;
                 case 'ตุลาคม':
                     Day(31);
                     break;
-                case 'พฤศจิกายม':
-                    Day(31);
+                case 'พฤศจิกายน':
+                    Day(30);
                     break;
                 case 'ธันวาคม':
                     Day(31);
@@ -61,7 +63,8 @@
         }
 
         function Day($d){
-            echo 'เดือน'.$month."มี ".$d." วัน";
+            $m = $_GET['month'];
+            echo 'เดือน'.$m."มี ".$d." วัน";
         }
     ?>
 
